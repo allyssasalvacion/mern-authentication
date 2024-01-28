@@ -43,24 +43,24 @@ Styled Components
    ```
    git clone https://github.com/your-username/your-repo.git
    ```
-   
+
 2. Install dependencies for both frontend and backend:
    ```
    # Navigate to the frontend directory
    cd client
    npm install
-        
+
    # Navigate to the backend directory
    cd server
    npm install
    ```
-   
+
 3. Configure environment variables. Create a **.env** file in the backend directory and set the following variables:
    ```
    MONGO_URI=your_mongo_database_uri
    JWT_SECRET=your_jwt_secret
    ```
-   
+
 ## Running the Application
 
 1. Start the backend server:
@@ -76,6 +76,6 @@ Styled Components
    cd client
    npm run dev
    ```
-   
+
 
 

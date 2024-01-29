@@ -30,7 +30,7 @@ const Login = () => {
     try {
       setLoading(true);
 
-      const { data } = await axios.post("/login", {
+      const { data } = await axios.post("login", {
         email,
         password,
       });

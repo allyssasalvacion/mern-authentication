@@ -82,7 +82,12 @@ const loginUser = async (req, res) => {
   }
 };
 
+const testUser = (req, res) => {
+  res.send("Hello World!");
+};
+
 module.exports = {
   registerUser,
   loginUser,
+  testUser,
 };

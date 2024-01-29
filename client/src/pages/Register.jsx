@@ -32,7 +32,7 @@ const Register = () => {
     try {
       setLoading(true);
 
-      const { data } = await axios.post("/register", {
+      const { data } = await axios.post("register", {
         firstName,
         lastName,
         email,

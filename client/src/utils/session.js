@@ -1,42 +1,32 @@
-import { ReactSession } from "react-client-session";
+const localStorageKey = "auth";
 
 export const setUserSession = (login) => {
-  ReactSession.set("id", login.user._id);
-  ReactSession.set("firstName", login.user.firstName);
-  ReactSession.set("lastName", login.user.lastName);
-  ReactSession.set("email", login.user.email);
-  ReactSession.set("token", login.token);
+  const authData = {
+    id: login.user._id,
+    firstName: login.user.firstName,
+    lastName: login.user.lastName,
+    email: login.user.email,
+    token: login.token,
+  };
+
+  localStorage.setItem(localStorageKey, JSON.stringify(authData));
 };
 
 export const clearUserSession = () => {
-  ReactSession.remove("id");
-  ReactSession.remove("firstName");
-  ReactSession.remove("lastName");
-  ReactSession.remove("email");
-  ReactSession.remove("token");
+  localStorage.removeItem(localStorageKey);
 };
 
 export const isAuthenticated = () => {
-  const token = ReactSession.get("token");
-  return Boolean(token);
+  const authData = JSON.parse(localStorage.getItem(localStorageKey));
+  return Boolean(authData && authData.token);
 };
 
 export const getAuthUser = () => {
-  const id = ReactSession.get("id");
-  const firstName = ReactSession.get("firstName");
-  const lastName = ReactSession.get("lastName");
-  const email = ReactSession.get("email");
-  const token = ReactSession.get("token");
-
-  return {
-    id,
-    firstName,
-    lastName,
-    email,
-    token,
-  };
+  const authData = JSON.parse(localStorage.getItem(localStorageKey));
+  return { ...authData };
 };
 
 export const getAccessToken = () => {
-  return ReactSession.get("token");
+  const authData = JSON.parse(localStorage.getItem(localStorageKey));
+  return authData ? authData.token : null;
 };

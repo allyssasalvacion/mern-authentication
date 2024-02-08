@@ -55,7 +55,12 @@ Styled Components
    npm install
    ```
 
-3. Configure environment variables. Create a **.env** file in the backend directory and set the following variables:
+3. Configure environment variables. Create a **.env** file in the frontend directory and set the following variables:
+   ```
+   VITE_API_BASE_URL=your_vite_api_base_url
+   ```
+   
+4. Configure environment variables. Create a **.env** file in the backend directory and set the following variables:
    ```
    MONGO_URI=your_mongo_database_uri
    JWT_SECRET=your_jwt_secret

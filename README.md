@@ -55,7 +55,7 @@ Styled Components
    npm install
    ```
 
-3. Configure environment variables. Create a **.env** file in the frontend directory and set the following variables:
+3. Configure environment variables. Create a **.env** file in the frontend directory and set the following variable:
    ```
    VITE_API_BASE_URL=your_vite_api_base_url
    ```

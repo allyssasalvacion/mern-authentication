@@ -1,6 +1,6 @@
 # Ignore files and directories in the client folder
 client/dist/
-client/*.local
+client/*.local/
 
 
 # Ignore node_modules directory
@@ -10,6 +10,3 @@ server/node_modules/
 # Ignore environment variables file
 client/.env
 server/.env
-
-# Ignore build output
-client/dist/
